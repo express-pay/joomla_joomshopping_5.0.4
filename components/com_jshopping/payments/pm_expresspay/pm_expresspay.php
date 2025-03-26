@@ -79,6 +79,7 @@ class pm_expresspay extends PaymentRoot
 			"Surname" => $order->l_name,
 			"FirstName" => $order->f_name,
 			"City" => $order->city,
+			"Info" => "Оплата заказа №".$order->order_id,
 			"ReturnUrl" => JURI::root() . "index.php?option=com_jshopping&controller=checkout&task=step7&act=return&js_paymentclass=$pm_method->payment_class&order_id=$order->order_id",
 			"FailUrl" => JURI::root() . "index.php?option=com_jshopping&controller=checkout&task=step7&act=cancel&js_paymentclass=$pm_method->payment_class&order_id=$order->order_id",
 			"ReturnType" => "redirect",
